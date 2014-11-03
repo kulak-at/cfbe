@@ -1,0 +1,164 @@
+body, html {
+  margin: 0; padding: 0;
+  font-family: 'EB Garamond', serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#header {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  #cfbe-logo > img {
+    width: 150px;
+    margin-left: 16%;
+    margin-top: 2%;
+  }
+  #cfbe-logo-long {
+    width: 60%;
+    margin-left: 20%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+  }
+  .container {
+    // background: yellow;
+    height: 100%;
+    position: relative;
+  }
+}
+
+#header-background {
+  width: 100%;
+  max-width: 1024px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  background: url('../img/header-background.jpg') center 30% no-repeat;
+  background-size: 100%;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+#big-navigation {
+  list-style: none;
+  margin: 0; padding: 0;
+  width: 100%;
+  font-size: 0;
+  li {
+    font-size: 16px;
+    display: inline-block;
+    width: 50%;
+    margin: 0;
+    padding: 0.2em 1em;
+    transition: background ease-in 0.2s;
+    clear: both;
+    overflow: auto;
+    padding-left: 90px;
+    position: relative;
+    h3 {
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+    }
+    &:hover {
+      background: red;
+    }
+  }
+}
+#cfbe-page .fa {
+  position: absolute;
+  font-size: 80px;
+  top: 50%; left: 10px;
+  float: left;
+  text-align: center;
+  transform: translate(0,-50%);
+  transition: color ease-in 0.2s;
+}
+
+#cfbe-page {
+  .team {
+    .fa {
+      font-size: 60px;
+      color: #056839;
+    }
+    &:hover {
+      background-color: #056839;
+      color: #FFF;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  .tkf {
+    &:hover {
+      color: #FFF;
+      background: #000;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  .about {
+    .fa {
+      color: #ab1d4f;
+    }
+    &:hover {
+      color: #FFF;
+      background-color: #ab1d4f;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  .general {
+    .fa {
+      color: #0e76bd;
+    }
+    &:hover {
+      color: #FFF;
+      background-color: #0e76bd;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  .teachers {
+    .fa {
+      color: #8b5f3c;
+    }
+    &:hover {
+      color: #FFF;
+      background-color: #8b5f3c;
+      .fa {
+        color: #FFF;
+      }
+    }
+  }
+
+  .students {
+    .fa {
+      color: #8ec63f;
+    }
+    &:hover {
+      background-color: #8ec63f;
+      .fa {
+        color: #000;
+      }
+    }
+  }
+
+}
+
+

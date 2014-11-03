@@ -1,0 +1,59 @@
+{
+  "name": "cfbe",
+  "version": "0.1.0",
+  "description": "",
+  "main": " ",
+  "scripts": {
+    "start": "node server.js",
+    "pretest": "npm install",
+    "test": "karma start test/karma.conf.js --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "postupdate-webdriver": "./scripts/clear_mongo.sh",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor test/protractor-conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": " ",
+  "homepage": "",
+  "devDependencies": {
+    "autoprefixer-core": "^3.1.0",
+    "bower": "^1.3.11",
+    "gulp": "^3.8.8",
+    "gulp-concat": "^2.4.1",
+    "gulp-jshint": "^1.8.4",
+    "gulp-less": "^1.3.5",
+    "gulp-less-sourcemap": "^1.3.3",
+    "gulp-livereload": "^2.1.1",
+    "gulp-plumber": "^0.6.5",
+    "gulp-postcss": "^2.0.0",
+    "gulp-remove-use-strict": "0.0.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-sourcemaps": "^1.2.1",
+    "gulp-template": "^1.1.0",
+    "gulp-util": "^3.0.1",
+    "gulp-watch": "^1.0.5",
+    "jshint-stylish": "^0.4.0",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-firefox-launcher": "^0.1.3",
+    "karma-jasmine": "^0.1.5",
+    "karma-junit-reporter": "^0.2.2",
+    "main-bower-files": "^2.0.0",
+    "merge-stream": "^0.1.5",
+    "yargs": "^1.3.1",
+    "gulp-aglio": "0.0.5"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.3.3",
+    "express": "^4.9.3",
+    "git-rev": "kulak-at/git-rev",
+    "gulp-if": "^1.2.5",
+    "gulp-inject-reload": "0.0.2",
+    "protractor": "^1.3.1"
+  }
+}

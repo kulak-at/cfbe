@@ -1,59 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="kulak.CFBE">
 <head>
 	<title>CFBE</title>
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/font-awesome.css">
   <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
 </head>
-<body>
-  <div id="cfbe-page">
-    <header id="header">
-      <div id="header-background"></div>
-      <div class="container">
-        <a href="#" id="cfbe-logo"><img src="img/logo.png"></a>
-        <img src="img/logo-long.png" id="cfbe-logo-long">
-      </div>
-    </header>
-    <div id="main-section">
-      <div class="container">
-
-        <ul id="big-navigation">
-          <li class="about">
-            <div class="fa fa-info-circle"></div>
-            <h3>About</h3>
-            <p>Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. </p>
-          </li>
-          <li class="general">
-            <div class="fa fa-bars"></div>
-            <h3>General</h3>
-            <p>Lorem ipsum dolor sit amet.Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. </p>
-          </li>
-          <li class="tkf">
-            <h3>The Kings Foundation</h3>
-            <p>Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. </p>
-          </li>
-          <li class="teachers">
-            <div class="fa fa-book"></div>
-            <h3>Teachers</h3>
-            <p>Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet.</p>
-          </li>
-          <li class="team">
-            <div class="fa fa-users"></div>
-            <h3>Team</h3>
-            <p>Lorem ipsum dolor sit amet.Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. </p>
-          </li>
-          <li class="students">
-            <div class="fa fa-pencil"></div>
-            <h3>Students</h3>
-            <p>Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet. Lorem Ipsum dolor sit amet.</p>
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </div>
-  <script src="scripts/vendor.js"></script>
-  <script src="scripts/app.js"></script>
+<body ui-view="root" ng-class="{subpage: subpage}">
 </body>
+<script src="scripts/vendor.js"></script>
+<script src="scripts/app.js"></script>
 </html>

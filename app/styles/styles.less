@@ -1,6 +1,12 @@
+@time: 0.5s;
 body, html {
   margin: 0; padding: 0;
   font-family: 'EB Garamond', serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
 }
 
 * {
@@ -10,10 +16,13 @@ body, html {
 #header {
   position: relative;
   width: 100%;
-  height: 380px;
+  height: 290px;
+  overflow: hidden;
+  transition: all @time ease-in;
   #cfbe-logo > img {
-    width: 150px;
-    margin-left: 16%;
+    height: 67px;
+    margin-left: 1em;
+    transition: all @time ease-in;
     margin-top: 2%;
   }
   #cfbe-logo-long {
@@ -21,7 +30,10 @@ body, html {
     margin-left: 20%;
     position: absolute;
     bottom: 20px;
+    transition: all @time ease-in;
     left: 0;
+    pointer-events: none;
+    opacity: 1;
   }
   .container {
     // background: yellow;
@@ -32,14 +44,15 @@ body, html {
 
 #header-background {
   width: 100%;
-  max-width: 1024px;
+  max-width: 1424px;
   height: 100%;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
-  background: url('../img/header-background.jpg') center 30% no-repeat;
+  background: url('../img/header-background.jpg') center 34% no-repeat;
   background-size: 100%;
+  transition: ease-in background-position 0.2s;
 }
 .container {
   width: 100%;
@@ -73,6 +86,14 @@ body, html {
     }
   }
 }
+
+.subpage #main-section {
+  .container {
+    background: #EEE;
+    padding: 0 1em;
+  }
+}
+
 #cfbe-page .fa {
   position: absolute;
   font-size: 80px;
@@ -99,9 +120,20 @@ body, html {
   }
 
   .tkf {
+
+    .icon-tkf {
+      max-width: 100%;
+      max-height: 100%;
+      margin-left: -55px;
+      // position: absolute;
+      // top: 50%; left: 10px;
+      // float: left;
+      // transform: translate(0,-50%);
+
+    }
     &:hover {
       color: #FFF;
-      background: #000;
+      background: #FCAF56;
       .fa {
         color: #FFF;
       }
@@ -121,7 +153,7 @@ body, html {
     }
   }
 
-  .general {
+  .students {
     .fa {
       color: #0e76bd;
     }
@@ -147,12 +179,12 @@ body, html {
     }
   }
 
-  .students {
+  .general {
     .fa {
-      color: #8ec63f;
+      color: #FDF152;
     }
     &:hover {
-      background-color: #8ec63f;
+      background-color: #FDF152;
       .fa {
         color: #000;
       }
@@ -161,4 +193,83 @@ body, html {
 
 }
 
+#navigation {
+  float: right;
+  margin-top: 220px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity @time ease-in;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      color: #FFF;
+      font-size: 20px;
+      padding: 5px;
+      a {
+        display: block;
+        padding: 5px;
+        transition: background linear 0.2s;
+        &.active {
+          background: #25408f;
+        }
+      }
+    }
+  }
+}
 
+.subpage-section {
+  font-family: 'Myriad Pro Regular', sans-serif;
+  font-size: 16px;
+  color: #585858;
+
+  // text-align: justify;
+  clear: both;
+  overflow: auto;
+  .img-left {
+    float: left;
+    margin-right: 10px;
+  }
+  .img-right {
+    float: right;
+    margin-left: 10px;
+  }
+}
+
+.cfbe-icon {
+  width: 70px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+}
+
+
+body.subpage {
+  #header {
+    margin-top: -200px;
+    box-shadow: inset 0 0 1000px black;
+
+    #header-background {
+      background-position: center 60%;
+    }
+
+    #cfbe-logo > img {
+      margin-top: 210px;
+      margin-left: 10px;
+      height: 50px;
+      width: auto;
+    }
+    #cfbe-logo-long {
+      opacity: 0;
+    }
+  }
+  #navigation {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+@import "mobile";

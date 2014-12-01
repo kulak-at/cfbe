@@ -1,0 +1,24 @@
+<div id="cfbe-page">
+    <header id="header">
+      <div id="header-background"></div>
+      <div class="container">
+        <a ui-sref="main" id="cfbe-logo"><img src="img/logo.png"></a>
+        <img src="img/logo-long.png" id="cfbe-logo-long">
+        <nav id="navigation">
+          <ul>
+            <li><a ui-sref="subpage({id: 'about', lang: 'en'})" ui-sref-active="active">About</a></li>
+            <li><a ui-sref="subpage({id: 'tkf', lang: 'en'})" ui-sref-active="active">TKF</a></li>
+            <li><a ui-sref="subpage({id: 'team', lang: 'en'})" ui-sref-active="active">Team</a></li>
+            <li><a ui-sref="subpage({id: 'general', lang: 'en'})" ui-sref-active="active">General</a></li>
+            <li><a ui-sref="subpage({id: 'teachers', lang: 'en'})" ui-sref-active="active">Teachers</a></li>
+            <li><a ui-sref="subpage({id: 'students', lang: 'en'})" ui-sref-active="active">Students</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="main-section">
+      <div class="container" ui-view="content">
+
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,65 @@
+@media screen and (max-width: 751px) {
+  body {
+    // background: red;
+  }
+
+  #header-background {
+    background: url('../img/header-mobile.jpg') center top no-repeat;
+    background-size: cover;
+  }
+
+  #big-navigation {
+    position: absolute;
+    li {
+      width: 100%;
+    }
+  }
+
+  #header {
+
+    #cfbe-logo {
+      width: 100%;
+      display: block;
+      background: #FFF;
+      padding: 20px;
+      text-align: center;
+      > img {
+        margin-left: 0;
+      }
+    }
+
+    #header-background {
+      margin-top: 130px;
+      height: 250px;
+    }
+
+    #cfbe-logo-long {
+      margin-left: 5%;
+      width: 90%;
+    }
+  }
+
+
+  body.subpage {
+    #header {
+      margin-top: -200px;
+      #cfbe-logo > img {
+        margin-top: 200px;
+      }
+
+      #navigation {
+        margin-top: 20px;
+        text-align: center;
+        float: none;
+        li {
+          font-size: 18px;
+          padding: 5px 0;
+        }
+      }
+    }
+    #main-section .container {
+      padding: 0 1em;
+    }
+  }
+
+}
